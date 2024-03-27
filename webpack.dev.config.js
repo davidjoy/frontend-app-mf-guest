@@ -11,7 +11,7 @@ config.plugins = [
     name: 'domain1',
     filename: 'remoteEntry.js',
     exposes: {
-      './Domain1Page': './src/example/Domain1Page',
+      './Domain1Page': './src/domain-1-page/Domain1Page',
     },
     shared: {
       react: {

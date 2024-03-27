@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
-import Domain1Page from './example/Domain1Page';
+import Domain1Page from './domain-1-page/Domain1Page';
 
 import './index.scss';
 
