@@ -18,13 +18,15 @@ subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
       <Header />
-      <p>
-        This page is not shared with the shell, but can be used for local development without it.
-      </p>
-      <p>
-        The "exposes" configuration in the ModuleFederationPlugin has to be removed to get HMR to work in this mode.
-      </p>
-      <Domain1Page />
+      <main>
+        <p>
+          This page is not shared with the shell, but can be used for local development without it.
+        </p>
+        <p>
+          The "exposes" configuration in the ModuleFederationPlugin has to be removed to get HMR to work in this mode.
+        </p>
+        <Domain1Page />
+      </main>
       <Footer />
     </AppProvider>,
     document.getElementById('root'),
