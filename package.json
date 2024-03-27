@@ -57,6 +57,7 @@
   "devDependencies": {
     "@edx/browserslist-config": "^1.1.1",
     "@edx/reactifex": "^2.1.1",
+    "@module-federation/enhanced": "^0.0.17",
     "@openedx/frontend-build": "13.0.28",
     "glob": "7.2.3",
     "husky": "7.0.4",
