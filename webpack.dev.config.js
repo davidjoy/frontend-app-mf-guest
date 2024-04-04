@@ -3,15 +3,15 @@ const { createConfig } = require('@openedx/frontend-build');
 
 const config = createConfig('webpack-dev');
 
-config.output.uniqueName = 'mf-domain1';
+config.output.uniqueName = 'mf-guest';
 
 config.plugins = [
   ...config.plugins,
   new ModuleFederationPlugin({
-    name: 'domain1',
+    name: 'guest',
     filename: 'remoteEntry.js',
     exposes: {
-      './Domain1Page': './src/domain-1-page/Domain1Page',
+      './GuestPage': './src/guest-page/GuestPage',
     },
     shared: {
       react: {
