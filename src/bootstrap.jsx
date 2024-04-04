@@ -10,9 +10,9 @@ import ReactDOM from 'react-dom';
 import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
-import Domain1Page from './domain-1-page/Domain1Page';
 
 import './index.scss';
+import GuestPage from './guest-page/GuestPage';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
@@ -20,12 +20,12 @@ subscribe(APP_READY, () => {
       <Header />
       <main>
         <p>
-          This page is not shared with the shell, but can be used for local development without it.
+          This page is not shared with the host, but can be used for local development without it.
         </p>
         <p>
-          The "exposes" configuration in the ModuleFederationPlugin has to be removed to get HMR to work in this mode.
+          The `exposes` configuration in the ModuleFederationPlugin has to be removed to get HMR to work in this mode.
         </p>
-        <Domain1Page />
+        <GuestPage />
       </main>
       <Footer />
     </AppProvider>,
@@ -40,6 +40,6 @@ subscribe(APP_INIT_ERROR, (error) => {
 initialize({
   messages,
   handlers: {
-    auth: () => {},
+    auth: () => {}, // This MFE turns off auth so it can run independently of edx-platform.
   },
 });

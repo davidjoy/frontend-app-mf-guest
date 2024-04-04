@@ -38,6 +38,6 @@ pull_translations:
 	            translations/paragon/src/i18n/messages:paragon \
 	            translations/frontend-component-footer/src/i18n/messages:frontend-component-footer \
 	            translations/frontend-component-header/src/i18n/messages:frontend-component-header \
-	            translations/frontend-app-mf-domain1/src/i18n/messages:frontend-app-mf-domain1
+	            translations/frontend-app-mf-guest/src/i18n/messages:frontend-app-mf-guest
 
-	$(intl_imports) frontend-platform paragon frontend-component-header frontend-component-footer frontend-app-mf-domain1
+	$(intl_imports) frontend-platform paragon frontend-component-header frontend-component-footer frontend-app-mf-guest
