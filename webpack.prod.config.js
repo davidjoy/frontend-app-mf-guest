@@ -1,7 +1,7 @@
 const { ModuleFederationPlugin } = require('@module-federation/enhanced');
 const { createConfig } = require('@openedx/frontend-build');
 
-const config = createConfig('webpack-dev');
+const config = createConfig('webpack-prod');
 
 config.output.uniqueName = 'mf-guest';
 
@@ -47,9 +47,5 @@ config.plugins = [
     },
   }),
 ];
-
-config.devServer.headers = {
-  'Access-Control-Allow-Origin': '*',
-};
 
 module.exports = config;
