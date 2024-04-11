@@ -7,8 +7,6 @@ import {
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import ReactDOM from 'react-dom';
 
-import Header from '@edx/frontend-component-header';
-import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
 
 import './index.scss';
@@ -17,17 +15,7 @@ import GuestPage from './guest-page/GuestPage';
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
-      <Header />
-      <main>
-        <p>
-          This page is not shared with the host, but can be used for local development without it.
-        </p>
-        <p>
-          The `exposes` configuration in the ModuleFederationPlugin has to be removed to get HMR to work in this mode.
-        </p>
-        <GuestPage />
-      </main>
-      <Footer />
+      <GuestPage />
     </AppProvider>,
     document.getElementById('root'),
   );
